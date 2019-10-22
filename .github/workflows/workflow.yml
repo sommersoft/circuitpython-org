@@ -10,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # keep the jobs from running on forks with Actions enabled, as they won't
+    # have the appropriate permissions and/or env variables.
+    if: github.repository == 'adafruit/circuitpython-org'
     steps:
     - uses: actions/checkout@v1
       with:
