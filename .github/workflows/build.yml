@@ -2,8 +2,7 @@ name: Jekyll site CI
 
 on:
   push:
-    branches:
-      - master
+    branches: [master, test_site_build_ci_test]
   schedule:
     - cron: 0 10 * * *
 
